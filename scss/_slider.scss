@@ -1,0 +1,106 @@
+.slider {
+    position: relative;
+}
+
+.slide-container {
+    display: flex;
+    overflow: hidden;
+}
+
+.slide {
+    flex: 0 0 100%;
+    padding: 100px 32px;
+
+    @media screen and (min-width: 768px) {
+        padding: 180px 60px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        padding: 180px 190px;
+    }
+}
+
+.slide-content {
+
+    & h1,
+    & p {
+        color: white;
+    }
+
+    & h1 {
+        margin-bottom: 15px; 
+        font-weight: 700;   
+    }
+
+    & p {
+        margin-bottom: 55px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        width: 50%;
+    }
+}
+
+.slide-1 {
+    background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url(../assets/home/mobile/image-hero-paramour.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (min-width: 768px) {
+        background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url(../assets/home/tablet/image-hero-paramour.jpg);
+    }
+
+    @media screen and (min-width: 1440px) {
+        background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url(../assets/home/desktop/image-hero-paramour.jpg);
+    }
+}
+
+.slide-2 {
+    background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url(../assets/home/desktop/image-hero-seraph.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide-3 {
+    background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url(../assets/home/desktop/image-hero-federal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide-4 {
+    background-image: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url(../assets/home/desktop/image-hero-trinity.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide-control {
+    display: none;
+
+    @media screen and (min-width: 1440px) {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        left: -80px;
+    }
+
+    & > p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        width: 80px;
+        background-color: $veryLightGrey;
+        color: $mediumGrey;
+    }
+
+    & p.current-slide {
+        background-color: $veryDarkBlue;
+        color: white;
+    }
+
+    & p:hover {
+        cursor: pointer;
+        background-color: $veryDarkBlue;
+        color: white;
+    }
+}
