@@ -18,6 +18,8 @@ menuToggle.addEventListener('click', () => {
 
         mobileMenu.classList.add('show');
 
+        body.classList.add('fixed');
+
         setTimeout( () =>{ mobileMenu.classList.add('fade-in'); }, 100);
 
 
@@ -27,6 +29,7 @@ menuToggle.addEventListener('click', () => {
         menuToggle.classList.remove('open'); 
 
         mobileMenu.classList.add('fade-out');
+        body.classList.remove('fixed');
 
         setTimeout( () =>{ 
             mobileMenu.classList.remove('show');

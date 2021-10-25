@@ -112,6 +112,11 @@ section {
   align-self: center;
 }
 
+.fixed {
+  position: fixed;
+  width: 100%;
+}
+
 .btn {
   display: inline-block;
   background-color: #1B1D23;
@@ -216,6 +221,7 @@ header > nav {
   margin: 0;
   padding: 15px 0;
   list-style: none;
+  height: 1200px;
 }
 
 @media screen and (min-width: 768px) {
