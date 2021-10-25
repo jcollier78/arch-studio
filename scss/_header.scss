@@ -1,3 +1,35 @@
+.page-label {
+    display: none;
+    position: fixed;
+    left: -6%;
+    transform-origin: top left;
+    transform: rotate(90deg);
+    text-transform: uppercase;
+    color: $lightGrey;
+    letter-spacing: 10px;
+
+    & span {
+        position: absolute;
+        top: -10px;
+        margin-left: 110px;
+    }
+
+    &::before {
+        content: '';
+        height: 1px;
+        width: 90px;
+        background-color: $lightGrey;
+        position: absolute;
+        left: -10px;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: block;
+        position: absolute;
+        top: 10px;
+    }
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -13,14 +45,6 @@ header {
         margin-left: 5rem;
     }
 
-}
-
-.page-label {
-    display: none;
-
-    // @media screen and (min-width: 768px) {
-    //     display: block;
-    // }
 }
 
 .logo {
@@ -73,6 +97,7 @@ header {
         background-color: transparent;
         width: auto;
         height: auto;
+        opacity: 1;
     }
 
     & ul {
@@ -83,8 +108,7 @@ header {
         background-color: $lightGrey;
         margin: 0;
         padding: 15px 0;
-        list-style: none;
-        height: 1200px;
+        list-style: none;       
 
         @media screen and (min-width: 768px) {
             display: flex;

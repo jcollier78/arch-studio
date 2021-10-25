@@ -29,6 +29,7 @@ menuToggle.addEventListener('click', () => {
         menuToggle.classList.remove('open'); 
 
         mobileMenu.classList.add('fade-out');
+
         body.classList.remove('fixed');
 
         setTimeout( () =>{ 
